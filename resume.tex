@@ -1,7 +1,7 @@
 %-------------------------
 % Resume in Latex
 % Original Author : Sourabh Bajaj
-% Editted By : Christian Carrico
+% Edited By : Christian Carrico
 % License : MIT
 %------------------------
 
@@ -16,6 +16,8 @@
 \usepackage{enumitem}
 \usepackage[pdftex]{hyperref}
 \usepackage{fancyhdr}
+\usepackage{makecell}
+
 
 
 \pagestyle{fancy}
@@ -25,11 +27,14 @@
 \renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.375in}
-\addtolength{\evensidemargin}{-0.375in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\oddsidemargin}{-0.875in}  %right margin
+\addtolength{\evensidemargin}{-0.875in} %left margin
+\addtolength{\textwidth}{1.775in}
+\addtolength{\topmargin}{-0.875in}
+\addtolength{\textheight}{1.775in}
+
+%section spacing {}{Above}{Below}
+\titlespacing{\section}{2pt}{3mm}{3mm}
 
 \urlstyle{same}
 
@@ -39,80 +44,91 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule]
 
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[1]{
-	\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
- 		\small{\textbf{#1}}
- 	\end{tabular*}
+  \item\small{#1}
 }
 
+\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=1mm, parsep=0mm, topsep=0mm]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
 \newcommand{\sectionHeader}[2]{
-	\small{ \textbf{#1} | #2}
+	\vspace{5pt}\small{ \textbf{#1} | #2}
+}
+
+\newcommand{\projectItem}[2]{
+  \vspace{5pt}\small{\textbf{#1}{: #2}} \\
 }
 
 \newcommand{\sectionSubHeader}[2]{
 	\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-		\quad\textit{\small#1} & \textit{\small #2} \\
+		\quad\textit{\small{#1}} & \textit{\small{#2}}
 	\end{tabular*}
 }
 
-
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
-
-\newcommand{\itemListStart}{\begin{itemize}}
-\newcommand{\itemListEnd}{\end{itemize}\vspace{-5pt}}
-
+\newcommand{\Rplus}{\protect\hspace{-.1em}\protect\raisebox{.35ex}{\smaller{\smaller\textbf{+}}}}
+\newcommand{\Cpp}{\mbox{C\Rplus\Rplus}\xspace}
 
 \begin{document}
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{{\Large Christian Carrico}} &  \\ 
-		{github.com/chrismcarrico} &  {chrismcarrico@gmail.com}\\
-		{linkedin.com/in/chrismcarricoo} &  {(303) 517-2910} \\
+  \textbf{{\Huge Christian Carrico}} &  \\
+		\footnotesize{github.com/chrismcarrico} &  \footnotesize{chrismcarrico@gmail.com} \\
+		\footnotesize{linkedin.com/in/chrismcarricoo} &  \footnotesize{(303) 517-2910} \\
 \end{tabular*}
-
 
 %-----------EDUCATION-----------------
 \section{Education}
-    \sectionHeader
-    	{Colorado State University}{Fort Collins, CO}
-    	\sectionSubHeader
-    		{Bachelor of Science, Computer Engineering}{Aug. 2012 - Dec. 2017}
-    	\sectionSubHeader
-    		{Bachelor of Science, Mathematics with a concentration in Information Theory}{Aug. 2015 - Dec. 2017}
+    \sectionHeader{Colorado State University}{Fort Collins, CO}
+    	\sectionSubHeader{Bachelor of Science, Computer Engineering}{Aug. 2012 - Dec. 2017}
+    	\sectionSubHeader{Bachelor of Science, Mathematics with a concentration in Information Theory}{Aug. 2015 - Dec. 2017}
 
 %--------PROGRAMMING SKILLS------------
-\section{Technical Skills}
-
-
+\section{Technical Skills}{
+	\begin{small}
+	\setlength{\tabcolsep}{1em}
+		\begin{tabular*}{\textwidth}{l l l l l l}
+			\textbf{Programming:} 		& Python 	& C			& JavaScript 	& SQL 				& LaTeX					\\
+							   			& Java 		& \Rplus		& C\# 			&  					& Julia					\\
+																															\\
+			\textbf{Development Tools:} & Agile 	& OpenMP 	& ASP.NET		& NumPy \& SciPy	& Jupyter Notebooks		\\
+										& Git 		& MPI 		& JQuerey 		& Pandas			&						\\
+		\end{tabular*}
+	\end{small}							
+}
 %-----------EXPERIENCE-----------------
 \section{Experience}
-    \sectionHeader
-    	{AMRDEC}{Colorado Springs, CO}
-   		\sectionSubHeader
-   			{Computer Engineer}{Apr. 2018 - Present}
-   	\sectionHeader
-   		{CSU Accelerator Research Lab}{Fort Collins, CO}
-   		\sectionSubHeader
-   			{Engineering Intern}{Aug. 2012 - Aug. 2014}
+    \sectionHeader{AMRDEC: Athena Lab}{Colorado Springs, CO}
+   		\sectionSubHeader{Computer Engineer}{Apr. 2018 - Present}
+			\resumeItemListStart
+				\resumeItem{Maintained an active Secret Security Clearance: 2014 - present}
+		   		\resumeItem{Managed development efforts as the government lead on lab projects by coordinating contractor and government activities }
+		   		\resumeItem{Improved lab project development by capturing customer requirements into JIRA to organize sprints for new project features}
+		   		\resumeItem{Evaluated small business purposals for technical merit on behalf of the MDA to improve the Modeling and Simulation Big Data effort}
+		   		\resumeItem{Engaged with Small Businesses to monitor contract progression, answer technical questions, and steer the contract in a direction that benefits the MDA}
+		   		\resumeItem{}
+		   \resumeItemListEnd
+   	\sectionHeader{CSU Accelerator Research Lab}{Fort Collins, CO}
+   		\sectionSubHeader{Engineering Intern}{Aug. 2012 - Aug. 2014}
+   			\resumeItemListStart
+   				\resumeItem{Modeled custom components in SolidWorks to be used in conjunction with the LINAC magnets and RF cavities}
+   				\resumeItem{Worked closely with graduate students and professors to document and test capabilities of lab equipment}
+   			\resumeItemListEnd
    	\sectionHeader{Electrical \& Computer Engineering College}{Fort Collins, CO}
    		\sectionSubHeader{Student Ambassador}{Aug. 2012 - Aug. 2014}
+   			\resumeItemListStart
+   				\resumeItem{Lead ECE departmment activities as an example of the department’s students to educate and encourage potential freshman}
+   			\resumeItemListEnd
 %-----------PROJECTS-----------------
 \section{Projects}
-		\resumeItem
-			{Classified Data Transform Automator}
-		\resumeItem
-			{MDA Big Data Architecture Design}
-		\resumeItem
-			{MDA Kill Chain Visualization Tool}
-		\resumeItem
-			{COCOM Workflow Assistance Tool}
-		\resumeItem
-			{Snowflake Classification Project}
-
+	\projectItem{Classified Data ETL Tool}{Python application to extract data from unstructured and structured sources. }
+	\projectItem{Modeling \& Simulation Data Warehouse Architecture Design}{Systematic trade study on different big data tools and solutions to design a warhouse for data produced by simulations}
+	\projectItem{COCOM Workflow Assistance Tool}{Web application used by Warfighters to organize the COCOM's tasking, scheduling, and inventory. }
+	\projectItem{Snowflake Classification Project}{Python neural network implementation used to classify a large database of snowflakes. }
+	\projectItem{C++ Number Factorization Project}{A C++ personal project used to explore and implement the Qaudratic Sieve, a complicated algorithm for factoring large pseudoprimes}
 \end{document}

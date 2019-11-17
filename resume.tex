@@ -66,37 +66,63 @@
 \newcommand{\Csharp}{C\nolinebreak\hspace{-.05em}\raisebox{.4ex}{\scriptsize\bf \#}}
 
 %Project Macros
-\newcommand{\jest}{
-	\projectHeader{COCOM Workflow Web Application}
+\newcommand{\kettle}{
+	\projectHeader{Scalable M\&S ETL Pipeline}
 		\resumeItemListStart
-			\bulletItem{Supervised development on .NET application used by Warfighters to manage critical operations such as scheduling, day-to-day tasking, and inventory}
-			\bulletItem{Developed frontend and backend tasks to incorporate email notifiations and Service Desk Pro like tasking into the application}
-			\bulletItem{Improved application code quality by refactoring web controller functions and standardizing web views}
-		\resumeItemListEnd}
+			\bulletItem{Implemented several prototype pipelines using open-source frameworks like Apache Storm, Apache Beam, and Apache Airflow}
+			\bulletItem{Achieved a speed up improvement of \~12x using Python's multiprocessing library}
+			\bulletItem{Bundled the pipeline as a Python package to deploy and scale across a Dockerized M\&S enviroment}
+		\resumeItemListEnd
+}
+
+\newcommand{\dsb}{
+	\projectHeader{Kaggle Data Science Bowl 2019}
+		\resumeItemListStart
+			\bulletItem{Organized a team of coworkers for the current on-going Data Science competition}
+			\bulletItem{Conducted initial data exploration and formatting using Jupyter Notebooks, Pandas, and other Python libraries} %jupyter notebooks
+		\resumeItemListEnd
+}
+
+\newcommand{\jest}{
+	\projectHeader{Workflow Planning Web Application}
+		\resumeItemListStart
+			\bulletItem{Supervised sprint planning for a .NET application used to manage COCOM exercise planning}
+			\bulletItem{Completed frontend and backend developement tasks to incorporate new features like email notifiations and tasking functionality}
+			\bulletItem{Dramatically improved codebase quality by refactoring \Csharp controller functions and standardizing JavaScript web views}
+		\resumeItemListEnd
+}
+
 \newcommand{\dap}{
 	\projectHeader{Data Warehouse Design Study}
 		\resumeItemListStart
-			\bulletItem{Investigated a systematic trade study to design a data warehouse for Missile Defense Agency M\&S efforts}
-			\bulletItem{Volunteered for MapR Admin training, and prepared a development enviroment for a local MapR install}
-			\bulletItem{Explored applications of various ETL and stream processing tools, such as Apache Storm}
-		\resumeItemListEnd}
+			\bulletItem{Conducted a systematic trade study for to compare commercial off-the-shelf data storage and pipeline solutions}
+			\bulletItem{Deployed and integrated promising tools with Amazon Web Services to prototype a management system for petabyte-scale Modeling \& Simulation data}
+		\resumeItemListEnd
+}
+
 \newcommand{\ladon}{
-	\projectHeader{Operations Data ETL Tool}
+	\projectHeader{Operational Data Parsing Tool}
 		\resumeItemListStart
-			\bulletItem{Spearheaded the development of an ETL application to extract data from structured and unstructured sources for critical Warfighter operations report}
-			\bulletItem{Utilized the Agile methodology to make iterative improvements to the tool's front and backend functionality}
-		\resumeItemListEnd}
+			\bulletItem{Spearheaded development of a Python tool to parse data from structured and unstructured sources into Operational Testing reports}
+			\bulletItem{Utilized the Agile methodology to deliver continuous updates to functionality during a critical test period }
+		\resumeItemListEnd
+}
+
 \newcommand{\snowflake}{
 	\projectHeader{Snowflake Classification Project}
 		\resumeItemListStart
-			\bulletItem{Designed a classification technique for a CSU research group using machine learning techniques to classify snowflake images}
-			\bulletItem{Improved the research group's classification rate by 15\% using a combination of convolutional and typical neural networks }
-		\resumeItemListEnd}
+			\bulletItem{Trained a machine learning model to classify snowflake images for a CSU research group}
+			\bulletItem{Improved the research group's previous classification rate by 15\% using an essemble of neural networks}
+		\resumeItemListEnd
+}
+
 \newcommand{\QS}{
 	\projectHeader{Integer Factorization Project}
 		\resumeItemListStart
 			%todo
-		\resumeItemListEnd}
+		\resumeItemListEnd
+}
+
 \newcommand{\hp}{
 	\projectHeader{Hewlett-Packard \& Colorado State Senior Design Project}
 		\resumeItemListStart
@@ -104,33 +130,39 @@
 			computers}
 			\bulletItem{Designed a C \& \Cpp code architecture that focuses on expandability and of ease maintenance for future HP
 			engineers}
-		\resumeItemListEnd}
+		\resumeItemListEnd
+}
 
 %Experience Macros
 \newcommand{\amrdec}{
-	\sectionHeader{AMRDEC: Athena Lab}{Colorado Springs, CO}
+	\sectionHeader{CCDC AvMC: Athena Lab}{Colorado Springs, CO}
    		\sectionSubHeader{Computer Engineer}{Apr. 2018 - Present}
 			\resumeItemListStart
 				\bulletItem{Maintained an active Secret level security clearance: 2014 - present}
 		   		\bulletItem{Drove development of several lab projects as the government lead by coordinating contractor and government efforts}
-		   		\bulletItem{Focused project deliveries by capturing customer requirements into JIRA and organizing sprints for new project features}
+		   		\bulletItem{Improved project deliveries by capturing customer requirements into JIRA and organizing sprints for new project features}
 		   		\bulletItem{Evaluated small business proposals for technical merit on behalf of the Missile Defense Agency}
-		   		\bulletItem{Engaged with small businesses as a Contract Office Representative to monitor progress and provide technical guidance on contract requirements}
-		   		\bulletItem{Mentored student interns by identifying noncritical tasks that contribute to the mission and individual growth}
-		   \resumeItemListEnd}
+		   		\bulletItem{Engaged with small businesses as a Te to monitor progress and provide technical guidance on contract requirements}
+		   		\bulletItem{Mentored student interns by delegating noncritical tasks that contribute to the mission and individual growth}
+		   \resumeItemListEnd
+}
+
 \newcommand{\accelerator}{
 	\sectionHeader{CSU Linear Accelerator Research Lab}{Fort Collins, CO}
 		\sectionSubHeader{Engineering Intern}{July 2012 - May 2013}
 			\resumeItemListStart
-				\bulletItem{Developed a website to represent the Accelerator Lab's research to the public}
+				\bulletItem{Developed a website to capture the Accelerator Lab's research and faculty for public consumption}
 				\bulletItem{Gathered materials for the lab's public image by interviewing professors and graduate student teams}
-			\resumeItemListEnd}
+			\resumeItemListEnd
+}
+
 \newcommand{\ambassador}{
 	\sectionHeader{Electrical \& Computer Engineering College}{Fort Collins, CO}
    		\sectionSubHeader{Student Ambassador}{Aug. 2012 - Aug. 2014}
    			\resumeItemListStart
    				\bulletItem{Lead ECE department activities as an example of the department’s students to educate and encourage potential freshman}
-   			\resumeItemListEnd}
+   			\resumeItemListEnd
+}
 
 \begin{document}
 
@@ -159,10 +191,12 @@
 		\end{small}}			
 
 	\section{Projects}
-		\ladon
+		\kettle
 		\jest
 		\dap
+		\ladon
 		\snowflake
+		\dsb
 
 	\section{Experience}
 		\amrdec

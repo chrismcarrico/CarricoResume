@@ -69,17 +69,17 @@
 \newcommand{\kettle}{
 	\projectHeader{Scalable M\&S ETL Pipeline}
 		\resumeItemListStart
-			\bulletItem{Implemented several prototype pipelines using open-source frameworks like Apache Storm, Apache Beam, and Apache Airflow}
-			\bulletItem{Achieved a speed up improvement of \~12x using Python's multiprocessing library}
-			\bulletItem{Bundled the pipeline as a Python package to deploy and scale across a Dockerized M\&S enviroment}
+			\bulletItem{Prototyped several data pipelines using open source frameworks like Apache Storm, Apache Beam, and Apache Airflow}
+			\bulletItem{Achieved a speed up improvement of \~12x using Python's multiprocessing library over the next best implementation }
+			\bulletItem{Bundled the pipeline as a Python package to scale across a Dockerized M\&S enviroment}
 		\resumeItemListEnd
 }
 
 \newcommand{\dsb}{
 	\projectHeader{Kaggle Data Science Bowl 2019}
 		\resumeItemListStart
-			\bulletItem{Organized a team of coworkers for the current on-going Data Science competition}
-			\bulletItem{Conducted initial data exploration and formatting using Jupyter Notebooks, Pandas, and other Python libraries} %jupyter notebooks
+			\bulletItem{Organized a team of coworkers for the on-going Data Science competition}
+			%\bulletItem{Conducted initial data exploration and formatting using Jupyter Notebooks, Pandas, and other Python libraries} %jupyter notebooks
 		\resumeItemListEnd
 }
 
@@ -87,8 +87,8 @@
 	\projectHeader{Workflow Planning Web Application}
 		\resumeItemListStart
 			\bulletItem{Supervised sprint planning for a .NET application used to manage COCOM exercise planning}
-			\bulletItem{Completed frontend and backend developement tasks to incorporate new features like email notifiations and tasking functionality}
-			\bulletItem{Dramatically improved codebase quality by refactoring \Csharp controller functions and standardizing JavaScript web views}
+			\bulletItem{Completed frontend and backend development tasks to incorporate new features like email notifiations and tasking functionality}
+			\bulletItem{Dramatically improved codebase quality by refactoring \Csharp controllers and standardizing JavaScript web views}
 		\resumeItemListEnd
 }
 
@@ -104,7 +104,7 @@
 	\projectHeader{Operational Data Parsing Tool}
 		\resumeItemListStart
 			\bulletItem{Spearheaded development of a Python tool to parse data from structured and unstructured sources into Operational Testing reports}
-			\bulletItem{Utilized the Agile methodology to deliver continuous updates to functionality during a critical test period }
+			\bulletItem{Utilized the Agile methodology to deliver continuous updates to functionality during a critical test period}
 		\resumeItemListEnd
 }
 
@@ -126,8 +126,7 @@
 \newcommand{\hp}{
 	\projectHeader{Hewlett-Packard \& Colorado State Senior Design Project}
 		\resumeItemListStart
-			\bulletItem{Collaborated within a team of HP engineers to design and prototype a performance monitoring tool for use in workstation
-			computers}
+			\bulletItem{Collaborated within a team of HP engineers to design and prototype a performance monitoring tool for use in workstation computers}
 			\bulletItem{Designed a C \& \Cpp code architecture that focuses on expandability and of ease maintenance for future HP
 			engineers}
 		\resumeItemListEnd
@@ -142,7 +141,7 @@
 		   		\bulletItem{Drove development of several lab projects as the government lead by coordinating contractor and government efforts}
 		   		\bulletItem{Improved project deliveries by capturing customer requirements into JIRA and organizing sprints for new project features}
 		   		\bulletItem{Evaluated small business proposals for technical merit on behalf of the Missile Defense Agency}
-		   		\bulletItem{Engaged with small businesses as a Te to monitor progress and provide technical guidance on contract requirements}
+		   		\bulletItem{Engaged with small businesses on Small Business Innovation Proposals to monitor progress and provide technical guidance on contract requirements}
 		   		\bulletItem{Mentored student interns by delegating noncritical tasks that contribute to the mission and individual growth}
 		   \resumeItemListEnd
 }
@@ -164,6 +163,16 @@
    			\resumeItemListEnd
 }
 
+\newcommand{\skills}{
+	\begin{small}
+		\setlength{\tabcolsep}{2em}
+			\begin{tabular*}{\textwidth}{l l l l l l }
+				\tableLine{Languages}{Python}{C}{\Cpp}{JavaScript}{Java}
+				\tableLine{Additional}{MongoDB}{MySQL}{Git}{AWS}{LaTeX}
+			\end{tabular*}
+		\end{small}
+}
+
 \begin{document}
 
 %----------HEADING-----------------
@@ -179,16 +188,14 @@
 	    \sectionHeader{Colorado State University}{Fort Collins, CO}
 	    	\sectionSubHeader{Bachelor of Science, Computer Engineering}{Aug. 2012 - Dec. 2017}
 	    	\sectionSubHeader{Bachelor of Science, Mathematics with a concentration in Information Theory}{Aug. 2015 - Dec. 2017}
+	
+	\section{Skills}
+		\skills
 
-	\section{Technical Skills}{
-		\begin{small}
-		\setlength{\tabcolsep}{2em}
-			\begin{tabular*}{\textwidth}{l l l l l l }
-				\tableLine{Programming}{Python}{Java}{C}{\Cpp}{Julia}\\
-				\tableLine{Web Development}{\Csharp}{JavaScript}{SQL}{jQuery}{HTML \& CSS}\\
-				\tableLine{Additional}{Git}{JIRA}{OpenMP}{MPI}{Jupyter Notebooks}
-			\end{tabular*}
-		\end{small}}			
+	\section{Experience}
+		\amrdec
+		\accelerator
+		\ambassador
 
 	\section{Projects}
 		\kettle
@@ -197,11 +204,6 @@
 		\ladon
 		\snowflake
 		\dsb
-
-	\section{Experience}
-		\amrdec
-		\accelerator
-		\ambassador
 	
 
 \end{document}

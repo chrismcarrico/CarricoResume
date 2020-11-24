@@ -4,4 +4,4 @@ pdf:
 	pdflatex resume.tex
 
 clean:
-	rm -f *.log *.pdf *.aux *.out
+	rm -f *.log *.pdf *.aux *.out *.fdb_latexmk *.gz *.fls
